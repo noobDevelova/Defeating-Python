@@ -1,0 +1,10 @@
+print("########## FILL YOUR FORM ##########")
+fname = input("First Name: ")
+lname = input("Last Name: ")
+age = input("Age: ")
+date = input("Date Of Birth: ")
+print("Your name is " + fname + " " + lname)
+print("Your age " + age)
+print("Your birth date " + date)
+print("####################################")
+
