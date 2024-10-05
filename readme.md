@@ -1,6 +1,6 @@
 # Defeating Python
 
-![Python Logo](https://www.python.org/community/logos/python-logo.png)
+![Python](https://www.python.org/community/logos/python-logo.png)
 
 Welcome to the Defeating Python Repo! This repository contains various materials, code examples, and projects related to learning the Python programming language. The goal of this repository is to assist beginners and developers looking to enhance their skills in Python.
 
