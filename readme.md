@@ -10,11 +10,6 @@ Welcome to the Defeating Python Repo! This repository contains various materials
 - [Features](#features)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Example Projects](#example-projects)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
 
 ## Description
 
