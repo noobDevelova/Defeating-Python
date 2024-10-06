@@ -20,4 +20,4 @@ final_dictionary = {
     "c": 7,
 }
 
-print(starting_dictionary)
+print(starting_dictionary["f"][0]['name'])
