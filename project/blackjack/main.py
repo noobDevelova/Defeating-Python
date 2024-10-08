@@ -60,6 +60,32 @@ def calculate_score(cards):
 
     return sum(cards)  # Return the total score of the hand.
 
+def compare(u_score, c_score):
+    """
+    Compare the user's and the computer's scores to determine the outcome of the game.
+    
+    Args:
+        u_score (int): The final score of the user.
+        c_score (int): The final score of the computer.
+    
+    Returns:
+        str: A message indicating the result (win, lose, draw) based on the comparison.
+    """
+    if u_score == c_score:
+        return "Draw 🙃"
+    elif c_score == 0:
+        return 'Lose, opponent has Blackjack 😎'
+    elif u_score == 0:
+        return 'Win with a Blackjack 😎'
+    elif u_score > 21:
+        return 'You went over. You Lose 😭'
+    elif c_score > 21:
+        return 'Opponent went over. You Win 😃'
+    elif u_score > c_score:
+        return 'You win 😃'
+    else:
+        return 'You Lose 😭'
+
 def blackjack():
     """
     Implements the main logic for the Blackjack game.
@@ -87,7 +113,7 @@ def blackjack():
     if user_score == 0:
         print(f"Your final hand: {user_data['stack']}, final score: {user_score}")
         print(f"Computer's final hand: {computer_data['stack']}, final score: {computer_score}")
-        print("Win with a Blackjack 😎")
+        print(compare(user_score, computer_score))
         return  # End the game if the user has a Blackjack
 
     # Allow the user to draw additional cards if the score is less than 21
@@ -104,7 +130,7 @@ def blackjack():
             if user_score > 21:  # User loses if their score exceeds 21
                 print(f"Your final hand: {user_data['stack']}, final score: {user_score}")
                 print(f"Computer's final hand: {computer_data['stack']}, final score: {computer_score}")
-                print("You went over 21. You lose 😭")
+                print(compare(user_score, computer_score))
                 return
         else:
             break  # If user passes, stop drawing cards
@@ -117,16 +143,8 @@ def blackjack():
     # Display final hands and scores
     print(f"Your final hand: {user_data['stack']}, final score: {user_score}")
     print(f"Computer's final hand: {computer_data['stack']}, final score: {computer_score}")
+    print(compare(user_score, computer_score))
 
-    # Determine the winner based on final scores
-    if computer_score > 21:  # Computer loses if its score exceeds 21
-        print("Computer went over 21. You win! 😃")
-    elif user_score > computer_score:  # User wins if their score is higher
-        print("You win! 😃")
-    elif user_score < computer_score:  # Computer wins if their score is higher
-        print("You lose 😭")
-    else:  # It's a draw if both have the same score
-        print("It's a draw!")
 
 def main():
     """
